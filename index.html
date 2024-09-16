@@ -1,0 +1,119 @@
+<!--WoxicDEV-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Text Gen</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <div class="header">
+      <span>
+        <a style="margin-left: 40px;" class="header-text">Discord Renkli Metin Oluşturma Aracı</a>
+        <a style="margin-left: 20px; transition: 0.3s;" class="header-text">Hakkımda</a>
+        <a class="header-text" link="github.com/majestyy01" id="link1" target="_blank"></a>
+      </span>
+    </div>
+    <div class="center">
+      <div class="div">
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #dc322f;">Red</button>
+          <div class="dropdown-content" style="width: 170px; color: #dc322f;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="red1" type="radio" name="radio" class="radio" onclick="checkBox()">- hello, world!</input>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #cb4b16;">Turuncu</button>
+          <div class="dropdown-content" style="width: 170px; color: #cb4b16;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="orange1" type="radio" name="radio" class="radio" onclick="checkBox()">hello,_world!</input>
+            <input id="orange2" type="radio" name="radio" class="radio" onclick="checkBox()">[hello, world!]</input>
+            <input id="orange3" type="radio" name="radio" class="radio" onclick="checkBox()"># hello, world!</input>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #b58900;">Sarı</button>
+          <div class="dropdown-content" style="width: 170px; color: #b58900;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="yellow1" type="radio" name="radio" class="radio" onclick="checkBox()">hello, world!</input>
+            <input id="yellow2" type="radio" name="radio" class="radio" onclick="checkBox()">hello,_world!</input>
+            <input id="yellow3" type="radio" name="radio" class="radio" onclick="checkBox()">%hello,_world!%</input>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #859900;">Lime</button>
+          <div class="dropdown-content" style="width: 170px; color: #859900;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="lime1" type="radio" name="radio" class="radio" onclick="checkBox()">! hello, world!</input>
+            <input id="lime2" type="radio" name="radio" class="radio" onclick="checkBox()">+ hello, world!</input>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #2aa198;">Cyan</button>
+          <div class="dropdown-content" style="width: 170px; color: #2aa198;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="cyan1" type="radio" name="radio" class="radio" onclick="checkBox()">hello, world!</input>
+            <input id="cyan2" type="radio" name="radio" class="radio" onclick="checkBox()">'hello, world!'</input>
+            <input id="cyan3" type="radio" name="radio" class="radio" onclick="checkBox()">"hello, world!"</input>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #268bd2;">Mavi</button>
+          <div class="dropdown-content" style="width: 170px; color: #268bd2;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="blue1" type="radio" name="radio" class="radio" onclick="checkBox()">hello, world!</input>
+            <input id="blue2" type="radio" name="radio" class="radio" onclick="checkBox()">.hello,_world!</input>
+            <input id="blue3" type="radio" name="radio" class="radio" onclick="checkBox()">= hello, world!</input>
+            <input id="blue4" type="radio" name="radio" class="radio" onclick="checkBox()">[hello, world!]</input>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #839496;">Açık Gri</button>
+          <div class="dropdown-content" style="width: 150px; color: #839496;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="lightgray1" type="radio" name="radio" class="radio" onclick="checkBox()">hello, world!</input>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #4f545c;">Gri</button>
+          <div class="dropdown-content" style="width: 170px; color: #4f545c;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="gray1" type="radio" name="radio" class="radio" onclick="checkBox()"># hello, world!</input>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn" style="color: #fff; background: #073745;">Vurgulama</button>
+          <div class="dropdown-content" style="width: 170px; color: #fff; background: #073745;">
+            <a style="color: #fff; font-size: 18px;">Preview:</a>
+            <br />
+            <input id="hightlighted1" type="radio" name="radio" class="radio" onclick="checkBox()">$ hello, world!</input>
+          </div>
+        </div>
+      </div>
+      <div class="div">
+        <div class="pull-tab"></div>
+        <textarea placeholder="Renk seçin ve birşeyler yazın" style="resize: none" id="input"></textarea>
+        <textarea placeholder="Kodu kopyalayın ve Discord'a yapıştırın" readonly id="output"></textarea>
+      </div>
+      <button id="copy" class="button" tabindex="-1">Kopyala</button>
+      <button id="clear" class="button" tabindex="-1">Temizle</button>
+      <button id="clear-all" class="button" tabindex="-1">Hepsini Temizle</button>
+    </div>
+  </body>
+  <footer>
+    <script src="script.js"></script>
+    <p>Bu Tool CodePendeki bir projeden esinlenerek yapılmıştır.</p>
+  </footer>
+</html>
